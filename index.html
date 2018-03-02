@@ -3,10 +3,28 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <body>
 
-<div ng-app="">
-  <p>Name : <input type="text" ng-model="name"></p>
-  <h1>Hello {{name}}</h1>
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+<p>Today's welcome message is:</p>
+<h1>{{myWelcome}}</h1>
+
 </div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+    $http.get("https://api.github.com/repos/taphuocanh/taphuocanh.github.io/git/blobs/8542be3dae41108a2953730ac89ba632629920e9")
+    .then(function(response) {
+        var data = Base64Decode(response.data.content);
+        $scope.myWelcome = data.data;
+    });
+});
+  
+function Base64Decode(str, encoding = 'utf-8') {
+    var bytes = base64js.toByteArray(str);
+    return new (TextDecoder || TextDecoderLite)(encoding).decode(bytes);
+}
+</script>
 
 </body>
 </html>
