@@ -4,24 +4,46 @@ My Blog on Github
 <!DOCTYPE html>
 <html lang="en-US">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js'></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.17/marked.min.js"></script>
+	<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 <body>
 
 <div ng-app="myApp" ng-controller="myCtrl"> 
 
 <p>Today's welcome message is:</p>
-<h1>{{myWelcome}}</h1>
+<div  ng-bind-html="myHTML"></div>
 
 </div>
 
 <script>
-var app = angular.module('myApp', []);
+var renderer = new marked.Renderer();
+
+renderer.code = function(code, language){
+  return '<pre><code class="hljs ' + language + '">' + 
+    hljs.highlight(language, code).value +
+    '</code></pre>';
+};
+
+//console.log(marked(codeStr, { renderer: renderer }));
+marked.setOptions({
+	renderer: new marked.Renderer(),
+	highlight: function(code) {
+		return hljs.highlight(code).value;
+	}
+});
+var app = angular.module('myApp', ['ngSanitize']);
 app.controller('myCtrl', function($scope, $http) {
-    $http.get("https://api.github.com/repos/taphuocanh/taphuocanh.github.io/git/blobs/8542be3dae41108a2953730ac89ba632629920e9")
+    $http.get("https://api.github.com/repos/taphuocanh/taphuocanh.github.io/contents/README.md")
     .then(function(response) {
-        var data = decodeBase64(response.data.content);
+        var data = marked(b64DecodeUnicode(response.data.content), { renderer: renderer });
         console.log(data);
-        $scope.myWelcome = data.data;
+        $scope.myHTML = data;
     });
 });
   
@@ -40,9 +62,15 @@ decodeBase64 = function(s) {
     }
     return r;
 };
+
+function b64DecodeUnicode(str) {
+    return decodeURIComponent(Array.prototype.map.call(atob(str), function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+    }).join(''))
+}
+
 </script>
 
 </body>
 </html>
-
 ```
