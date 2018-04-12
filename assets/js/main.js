@@ -2,7 +2,7 @@ var app = angular.module('app', ["ngRoute", "ui.bootstrap", "ngSanitize", "ui.so
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
-    .when({
+    .when('/', {
       templateUrl :  TEMPLATEDIR + "pages/home.html",
       controller: "homeCtrl"
     });
