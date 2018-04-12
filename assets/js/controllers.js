@@ -26,6 +26,16 @@ app.controller('navbarCtrl', function($scope, $location) {
     });
 });
 
-app.controller('sidebarCtrl', function($scope, $location) {
-  
+app.controller('sidebarCtrl', function($scope, $http) {
+    $http({
+        method : "GET",
+        headers : {
+            Authorization : "token 434cc0448616d63d2d79d8774c010582adf7d4ef"
+        },
+        url : "https://api.github.com/repos/" + user + "/" + rootrepos + "/git/trees/" + rootsha
+    }).then(function mySuccess(response) {
+        console.log(response.data);
+    }, function myError(response) {
+        console.log(response.statusText);
+    });
 });

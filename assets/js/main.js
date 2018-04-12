@@ -11,3 +11,9 @@ app.config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('!');
 });
+
+const TOKEN = '434cc0448616d63d2d79d8774c010582adf7d4ef';
+const user = 'taphuocanh';
+const rootrepos = 'nodejs.taphuocanh.com';
+const rootdir = 'Content-Blog';
+const rootsha = 'af33f33170973627fcc0a15b4e455af6c2ec3026'; 
