@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Helveticaneue';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./HELVETICANEUEULTRALIGHT.TTF') format('ttf');
+}
+@font-face {
+    font-family: 'Helveticaneue';
+    font-style: italic;
+    font-weight: 200;
+    src: url('./HELVETICANEUEULTRALIGHTITALIC.TTF') format('ttf');
+}
+
+@font-face {
+    font-family: 'Helveticaneue';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./HELVETICANEUELIGHT.TTF') format('ttf');
+}
+@font-face {
+    font-family: 'Helveticaneue';
+    font-style: italic;
+    font-weight: 300;
+    src: url('./HELVETICANEUELIGHTITALIC.TTF') format('ttf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./HELVETICANEUE.TTF') format('ttf');
+}
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./HELVETICANEUEITALIC.TTF') format('ttf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./HELVETICANEUEMEDIUM.TTF') format('ttf');
+}
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: italic;
+    font-weight: 500;
+    src: url('./HELVETICANEUEMEDIUM.TTF') format('ttf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./HELVETICANEUEBOLD.TTF') format('ttf');
+}
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: italic;
+    font-weight: 600;
+    src: url('./HELVETICANEUEBOLDITALIC.TTF') format('ttf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./HELVETICANEUECONDENSEDBOLD.TTF') format('ttf');
+}
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: italic;
+    font-weight: 700;
+    src: url('./HELVETICANEUECONDENSEDBOLD.TTF') format('ttf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./HELVETICANEUECONDENSEDBLACK.TTF') format('ttf');
+}
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: italic;
+    font-weight: 800;
+    src: url('./HELVETICANEUECONDENSEDBLACK.TTF') format('ttf');
+}

@@ -1,0 +1,198 @@
+@import './fonts/helveticaneue/helveticaneue.css';
+
+* {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+}
+.glyphicon {
+    font-family: 'Glyphicons Halflings' !important;
+}
+body {
+    background: #ececec;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin: 0px 0 0px;
+}
+.container {
+    background: #FFFFFF;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border:none;
+    min-height: 30px;
+    margin-bottom: 0;
+}
+
+.navbar-default .container {
+    background: #2a7b00;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+}
+@media (min-width: 768px) {
+    .navbar-nav>li>a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+.page-header {
+    padding: 5px 15px;
+    margin: 0px 0px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.nav.nav-tabs>li>a {
+    padding: 5px 15px;
+    border-radius: 0;
+}
+
+.tab-content {
+    padding: 10px;
+    border: solid #ddd;
+    border-width: 0 1px 1px 1px;
+}
+
+.form-control {
+    height: 36px;
+}
+
+.alert {
+    padding: 5px 15px;
+    border-radius: 0;
+    border-left-width: 3px;
+}
+.alert-success {
+    border-left-color: #00800b;
+}
+.alert-danger {
+    border-left-color: #bb4442;
+}
+
+.tooltip-inner {
+    max-width:none;
+}
+
+#pdf-list-merge {
+    list-style: none;
+    padding: 0;
+}
+
+#pdf-list-merge li {
+    border-width: 1px 1px 1px 4px;
+    border-style: solid;
+    border-color: #2b7b0a;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    background: #2b7b0a17;
+    cursor: n-resize;
+}
+
+
+#pdf-list-merge li.ui-sortable-placeholder.highlight {
+    height: 32px;
+    border: 1px dashed #5b5b5b;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+}
+.fileContainer-zone {
+    display: table;
+    width: 100%;
+}
+input[type=file].fileContainer {
+    display: table-cell;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #cecece;
+    vertical-align: middle;
+    text-align: center;
+    padding: 63px 46%;
+}
+input[type=file].fileContainer:hover {
+    border-color: #2b7b0a;
+    color: #2b7b0a;
+}
+
+.fileContainer [type=file] {
+    /*display: none;*/
+}
+
+ul#file-list {
+    padding: 0;
+    list-style: none;
+}
+
+ul#file-list li .alert{
+    position: absolute;
+    z-index: 10000000;
+}
+
+ul#file-list li {
+    background: #FFF;
+    border: 1px solid #98dfff;
+    margin-bottom: 5px;
+    padding: 5px 15px;
+}
+
+/* Helper classes */
+*[class^="padding-"] {
+    display: block;
+    width: 100%;
+    content: '';
+}
+.padding-5 {
+    padding-top: 5px;
+}
+.padding-10 {
+    padding-top: 10px;
+}
+.padding-15 {
+    padding-top: 15px;
+}
+.padding-20 {
+    padding-top: 20px;
+}
+.padding-25 {
+    padding-top: 25px;
+}
+.padding-30 {
+    padding-top: 30px;
+}
+.padding-35 {
+    padding-top: 35px;
+}
+.padding-40 {
+    padding-top: 40px;
+}
+.padding-45 {
+    padding-top: 45px;
+}
+.padding-50 {
+    padding-top: 50px;
+}
+
+
+.glyphicon.spinning {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
