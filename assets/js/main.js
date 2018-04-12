@@ -16,4 +16,4 @@ const TOKEN = '434cc0448616d63d2d79d8774c010582adf7d4ef';
 const user = 'taphuocanh';
 const rootrepos = 'nodejs.taphuocanh.com';
 const rootdir = 'Content-Blog';
-const rootsha = 'af33f33170973627fcc0a15b4e455af6c2ec3026'; 
+const rootsha = '259f3fe6cf92c7e7afcdd8da4c0b6d9c26bd4ddf'; 
